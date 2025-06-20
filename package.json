@@ -6,19 +6,26 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "scrape": "npx ts-node --project tsconfig.scripts.json scripts/improved-scraper.ts",
+    "fix-games": "npx ts-node --project tsconfig.scripts.json scripts/fix-games.ts"
   },
   "dependencies": {
+    "@types/puppeteer": "^7.0.4",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "next": "15.3.4",
+    "puppeteer": "^22.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.4"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
   }
 }
